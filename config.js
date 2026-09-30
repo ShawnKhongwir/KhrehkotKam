@@ -21,7 +21,7 @@ window.SITE_CONFIG = {
   // 2) Google AdSense. Leave client empty until AdSense approves your site.
   //    client looks like "ca-pub-1234567890123456"; slots come from AdSense > Ads > By ad unit.
   adsense: {
-    client: "",
+    client: "ca-pub-2278720516319104",
     slots: {
       top: "",       // banner under the menu
       notes: "",     // between shortcut-note sections
