@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy – MPSC Question Bank</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#eef1f3;--ink:#18242b;--muted:#5b6a73;--accent:#1f6b52}
+@media (prefers-color-scheme:dark){:root{--bg:#11181c;--ink:#e3eaee;--muted:#93a3ad;--accent:#4fbf95;color-scheme:dark}}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 "Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;margin:0}
+main{max-width:70ch;margin:0 auto;padding-inline:16px;padding-block:28px 60px}
+h1,h2{font-family:"Zilla Slab",Georgia,serif}
+a{color:var(--accent)} small{color:var(--muted)}
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+<main>
+<p><a href="index.html">← Back to the question bank</a></p>
+<h1>Privacy Policy</h1>
+<p><small>Last updated: <span id="upd">30 September 2026</span></small></p>
+
+<h2>What this site does</h2>
+<p><span class="site">MPSC Question Bank</span> is a free practice site for Meghalaya Public Service Commission exams. You can use it without an account.</p>
+
+<h2>Information we collect</h2>
+<p><b>Without signing in:</b> your answers, wrong answers and marked questions are stored only in your own browser (local storage). They never reach our servers.</p>
+<p><b>If you sign in with Google:</b> we receive your name, email address and a user ID from Google through Firebase Authentication. We store your practice progress (which questions you answered, whether they were right, and which you marked) in Google Cloud Firestore, linked to that user ID. We do not collect passwords.</p>
+
+<h2>How long we keep it</h2>
+<p>Saved progress is deleted automatically <span class="days">30</span> days after your last activity. Your sign-in record is kept by Firebase until you ask us to delete it. When you sign out, progress is also removed from the device you were using.</p>
+
+<h2>Advertising and cookies</h2>
+<p>This site shows ads from Google AdSense. Google and its partners use cookies to serve ads based on your visits to this and other websites. You can turn off personalised ads at <a href="https://adssettings.google.com" rel="noopener">Google Ads Settings</a>, and learn more at <a href="https://policies.google.com/technologies/ads" rel="noopener">How Google uses information from sites that use its services</a>.</p>
+
+<h2>Sharing</h2>
+<p>We do not sell your personal information. Data is processed by Google (Firebase and AdSense) as our service providers under their own privacy policies.</p>
+
+<h2>Children</h2>
+<p>This site is intended for exam candidates aged 18 and over.</p>
+
+<h2>Your choices</h2>
+<p>You can use the site without signing in, sign out at any time, and ask us to delete your account data by writing to <span class="mail">your-email@example.com</span>.</p>
+
+<h2>Contact</h2>
+<p><span class="mail">your-email@example.com</span></p>
+</main>
+<script>
+var c = window.SITE_CONFIG || {};
+document.querySelectorAll(".mail").forEach(function(e){ e.textContent = c.contactEmail || e.textContent; });
+document.querySelectorAll(".days").forEach(function(e){ e.textContent = c.retentionDays || 30; });
+document.querySelectorAll(".site").forEach(function(e){ e.textContent = c.siteName || e.textContent; });
+</script>
+</body>
+</html>

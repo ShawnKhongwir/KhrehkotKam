@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MPSC Question Bank – 7,600+ practice questions with shortcuts</title>
+<meta name="description" content="Free MPSC (Meghalaya) exam practice: English, GK &amp; Meghalaya GK, Arithmetic, Reasoning and Computer questions with answers, shortcut methods and timed mock tests.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: study desk — a slim top bar with subject counts, tab strip, one working column (question card or notes). Cloud-grey neutrals, pine-green accent for the Khasi hills. */
+:root{
+  --bg:#eef1f3; --panel:#ffffff; --ink:#18242b; --muted:#5b6a73; --line:#d5dde2;
+  --accent:#1f6b52; --accent-soft:#dcefe7; --accent-ink:#ffffff;
+  --good:#1e7a3c; --good-soft:#e0f3e6; --bad:#b3372c; --bad-soft:#f8e3e0; --warn:#9a6a00; --warn-soft:#fbf0d4;
+  --chip:#e6ebee;
+  --display:"Zilla Slab", Rockwell, "Roboto Slab", Georgia, serif;
+  --body:"Source Sans 3", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11181c; --panel:#18222a; --ink:#e3eaee; --muted:#93a3ad; --line:#2a3842;
+  --accent:#4fbf95; --accent-soft:#1d3a31; --accent-ink:#0c1a15;
+  --good:#5cc97f; --good-soft:#193726; --bad:#f08a7e; --bad-soft:#3c1f1c; --warn:#e6b84a; --warn-soft:#3a2f14; --chip:#223039; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11181c; --panel:#18222a; --ink:#e3eaee; --muted:#93a3ad; --line:#2a3842;
+  --accent:#4fbf95; --accent-soft:#1d3a31; --accent-ink:#0c1a15;
+  --good:#5cc97f; --good-soft:#193726; --bad:#f08a7e; --bad-soft:#3c1f1c; --warn:#e6b84a; --warn-soft:#3a2f14; --chip:#223039; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;margin:0}
+.wrap{max-width:980px;margin:0 auto;padding-inline:16px;padding-block:20px 60px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700}
+h2{font-size:1.35rem;font-weight:600}
+h3{font-size:1.1rem;font-weight:600}
+.top{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:flex-end;justify-content:space-between;padding-bottom:16px;border-bottom:2px solid var(--ink)}
+.top p{margin:4px 0 0;color:var(--muted)}
+.counts{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.counts b{color:var(--ink);font-weight:600}
+nav.tabs{display:flex;gap:4px;flex-wrap:wrap;margin:16px 0 20px}
+nav.tabs button{font:600 .95rem var(--body);border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 14px;border-radius:999px;cursor:pointer}
+nav.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+button{font-family:var(--body)}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;align-items:end;margin-bottom:14px}
+.bar label{display:flex;flex-direction:column;gap:3px;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);min-width:0}
+select,input[type=search],input[type=number]{font:500 .95rem var(--body);padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);max-width:100%}
+.btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:8px 14px;border-radius:8px;font-weight:600;cursor:pointer}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:disabled{opacity:.45;cursor:default}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:12px;font-size:.8rem}
+.chip{background:var(--chip);padding:2px 9px;border-radius:999px;font-weight:600}
+.chip.src{background:transparent;border:1px dashed var(--line);color:var(--muted);font-weight:500}
+.num{font-family:var(--mono);color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums}
+.q{font-size:1.12rem;font-weight:600;white-space:pre-line;margin:0 0 14px}
+.opts{display:grid;gap:8px}
+.opt{display:flex;gap:10px;align-items:flex-start;text-align:left;width:100%;border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:10px 12px;border-radius:10px;cursor:pointer;font-size:1rem}
+.opt .l{font-family:var(--mono);font-weight:600;color:var(--muted);min-width:1.4em}
+.opt.ok{background:var(--good-soft);border-color:var(--good)}
+.opt.no{background:var(--bad-soft);border-color:var(--bad)}
+.opt.pick{border-color:var(--accent);background:var(--accent-soft)}
+.opt:disabled{cursor:default}
+.explain{margin-top:14px;border-top:1px solid var(--line);padding-top:12px;display:grid;gap:8px}
+.explain .v{font-weight:700}
+.explain .v.good{color:var(--good)} .explain .v.bad{color:var(--bad)}
+.tip{background:var(--warn-soft);border-left:4px solid var(--warn);padding:8px 12px;border-radius:0 8px 8px 0}
+.tip b{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--warn)}
+.nav{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;align-items:center}
+.nav .sp{flex:1}
+.stats{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.85rem;color:var(--muted);margin:10px 2px 0;font-variant-numeric:tabular-nums}
+.stats b{color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(34px,1fr));gap:5px}
+.grid button{font:600 .75rem var(--mono);padding:6px 0;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:6px;cursor:pointer}
+.grid button.done{background:var(--accent-soft);border-color:var(--accent)}
+.grid button.cur{outline:2px solid var(--ink)}
+.grid button.ok{background:var(--good-soft);border-color:var(--good)}
+.grid button.no{background:var(--bad-soft);border-color:var(--bad)}
+.mockhead{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:12px}
+.timer{font:600 1.3rem var(--mono);font-variant-numeric:tabular-nums}
+.timer.low{color:var(--bad)}
+.twocol{display:grid;grid-template-columns:minmax(0,1fr) 230px;gap:16px;align-items:start}
+@media (max-width:760px){.twocol{grid-template-columns:1fr}}
+.score{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:14px 0}
+.score div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg)}
+.score small{display:block;color:var(--muted);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;font-weight:600}
+.score strong{font:600 1.4rem var(--mono)}
+.notes{display:grid;gap:14px}
+.notes section{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;min-width:0}
+.notes .sub{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.notes ul,.notes ol{padding-left:1.2em;margin:.6em 0 0;display:grid;gap:5px;max-width:75ch}
+.notes .two{display:flex;flex-wrap:wrap;gap:16px;overflow-x:auto}
+.notes table{border-collapse:collapse;font:.85rem var(--mono);font-variant-numeric:tabular-nums}
+.notes td,.notes th{border:1px solid var(--line);padding:2px 10px;text-align:right}
+.notes th{background:var(--chip)}
+.rlist{display:grid;gap:10px}
+.rlist .card{padding:14px 16px}
+.rlist .ans{color:var(--good);font-weight:600}
+.empty{color:var(--muted);padding:20px;text-align:center;border:1px dashed var(--line);border-radius:12px}
+.about{max-width:70ch;display:grid;gap:12px}
+.about a{color:var(--accent)}
+.bm{background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer;color:var(--ink);font-weight:600}
+.bm[aria-pressed="true"]{background:var(--warn-soft);border-color:var(--warn)}
+.toggle{display:flex;gap:6px;align-items:center;font-size:.9rem}
+@media (prefers-reduced-motion:no-preference){.opt{transition:background .12s,border-color .12s}}
+</style>
+<style>
+.authbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:flex-end;font-size:.9rem;min-width:0}
+.authbar .who{color:var(--muted);overflow-wrap:anywhere}
+.authbar .note{color:var(--muted);font-size:.8rem;width:100%;text-align:right}
+.adslot{margin:14px 0;min-height:0;text-align:center;overflow:hidden}
+.adslot .lbl{display:block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+footer.site{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--muted);font-size:.85rem}
+footer.site a{color:var(--muted)}
+</style>
+<script src="config.js"></script>
+<script src="data.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>MPSC Question Bank</h1>
+      <p>English · GK &amp; Meghalaya · Arithmetic · Reasoning · Computer — with worked shortcuts</p>
+    </div>
+    <div style="display:grid;gap:8px;justify-items:end;min-width:0">
+      <div class="authbar" id="authbar"></div>
+      <div class="counts" id="counts"></div>
+    </div>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button role="tab" data-tab="practice" aria-selected="true">Practice</button>
+    <button role="tab" data-tab="mock" aria-selected="false">Mock Test</button>
+    <button role="tab" data-tab="notes" aria-selected="false">Shortcut Notes</button>
+    <button role="tab" data-tab="review" aria-selected="false">Review</button>
+    <button role="tab" data-tab="about" aria-selected="false">About</button>
+  </nav>
+  <div class="adslot" data-slot="top" hidden></div>
+
+  <!-- PRACTICE -->
+  <section id="tab-practice">
+    <div class="bar">
+      <label for="p-sub">Subject<select id="p-sub"></select></label>
+      <label for="p-top">Topic<select id="p-top"></select></label>
+      <label for="p-q" style="flex:1;min-width:160px">Search<input id="p-q" type="search" placeholder="e.g. Nongkrem, train, Article 32"></label>
+      <label for="p-order">Order<select id="p-order"><option value="shuffle">Shuffled</option><option value="seq">In order</option><option value="unseen">Unattempted first</option></select></label>
+    </div>
+    <div class="card" id="p-card"></div>
+    <div class="stats" id="p-stats"></div>
+  </section>
+
+  <!-- MOCK -->
+  <section id="tab-mock" hidden>
+    <div class="card" id="m-setup">
+      <h2>Mock test</h2>
+      <p style="color:var(--muted);max-width:65ch">Follows the MPSC Group C pattern: 25 each from General English, GK &amp; Current Affairs (with Meghalaya), Arithmetic and Reasoning. Questions are drawn at random each time.</p>
+      <div class="bar" style="margin-top:12px">
+        <label for="m-n">Questions per section<input id="m-n" type="number" min="5" max="50" value="25"></label>
+        <label for="m-min">Time (minutes)<input id="m-min" type="number" min="10" max="240" value="120"></label>
+        <label for="m-neg">Negative marking<select id="m-neg"><option value="0">None</option><option value="0.25">−¼ per wrong</option><option value="0.3333">−⅓ per wrong</option></select></label>
+        <label class="toggle" for="m-comp" style="text-transform:none;letter-spacing:0;font-size:.9rem;flex-direction:row"><input id="m-comp" type="checkbox"> Add a Computer section</label>
+      </div>
+      <button class="btn primary" id="m-start">Start mock test</button>
+    </div>
+    <div id="m-run" hidden>
+      <div class="mockhead"><h2 id="m-title">Mock test</h2><span class="timer" id="m-timer">120:00</span><button class="btn" id="m-submit">Submit test</button></div>
+      <div class="twocol">
+        <div class="card" id="m-card"></div>
+        <div class="card"><h3 style="margin-bottom:8px">Questions</h3><div class="grid" id="m-grid"></div></div>
+      </div>
+      <div id="m-confirm" class="card" hidden style="margin-top:12px"><p style="margin:0 0 10px"><b>Submit now?</b> <span id="m-left"></span></p><button class="btn primary" id="m-yes">Yes, submit</button> <button class="btn" id="m-no">Keep going</button></div>
+    </div>
+    <div id="m-result" hidden></div>
+  </section>
+
+  <!-- NOTES -->
+  <section id="tab-notes" hidden>
+    <div class="bar"><label for="n-sub">Subject<select id="n-sub"></select></label></div>
+    <div class="notes" id="n-body"></div>
+    <div class="adslot" data-slot="notes" hidden></div>
+  </section>
+
+  <!-- REVIEW -->
+  <section id="tab-review" hidden>
+    <div class="bar">
+      <label for="r-kind">Show<select id="r-kind"><option value="wrong">Answered wrongly</option><option value="bm">Marked for review</option></select></label>
+      <button class="btn" id="r-practice">Practise these</button>
+      <button class="btn" id="r-reset">Reset my progress</button>
+    </div>
+    <div id="r-confirm" class="card" hidden style="margin-bottom:12px"><p style="margin:0 0 10px">This clears all your answered, wrong and marked questions in this browser.</p><button class="btn primary" id="r-yes">Clear progress</button> <button class="btn" id="r-no">Cancel</button></div>
+    <div class="rlist" id="r-list"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="tab-about" hidden>
+    <div class="card about">
+      <h2>About this bank</h2>
+      <p>Every question follows the topics and style of past MPSC Group C, Assistant and MCS papers and UPSC-style GK. They are original practice questions, labelled <i>Practice (PYQ pattern)</i>. None is presented as a verbatim past-paper question, because official MPSC answer keys for most papers aren't published online.</p>
+      <p>Maths, Reasoning and number-system questions are generated from formula templates, and every answer is computed, not typed, so the arithmetic is exact. English, GK and Computer questions are written from standard facts. GK is static, with a few settled events up to 2025. Add the last 12 months of current affairs from a monthly compilation before your exam.</p>
+      <p>To solve real past papers alongside this bank, use the downloads on <a href="https://mpsc.meghalaya.gov.in" target="_blank" rel="noopener">mpsc.meghalaya.gov.in</a> and the collections on <a href="https://www.adda247.com/exams/meghalaya/meghalaya-psc-previous-year-question-papers/" target="_blank" rel="noopener">Adda247</a>. UPSC Prelims papers are on <a href="https://upsc.gov.in/examinations/previous-question-papers" target="_blank" rel="noopener">upsc.gov.in</a>.</p>
+      <p>Without signing in, your progress is saved only in this browser. Sign in with Google to keep it across devices; it is deleted automatically after a period without use. See the <a href="privacy.html">privacy policy</a>.</p>
+    </div>
+  </section>
+  <footer class="site">
+    <span>© <span id="yr"></span> MPSC Question Bank</span>
+    <a href="about.html">About</a><a href="privacy.html">Privacy policy</a>
+    <span>Practice questions in the pattern of past MPSC / UPSC papers. Not affiliated with MPSC.</span>
+  </footer>
+</div>
+
+<script>
+const DATA = window.MPSC_DATA;
+const NOTES = window.MPSC_NOTES;
+const SUBJECTS = ["English","GK","Maths","Reasoning","Computer"];
+const SUBNAME = {English:"English",GK:"GK & Meghalaya",Maths:"Arithmetic",Reasoning:"Reasoning",Computer:"Computer"};
+const L = "ABCD";
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+// ---------- progress store (per browser) ----------
+const KEY = "mpscbank.v1";
+const CFG = window.SITE_CONFIG || {};
+const DAYS = Math.max(1, +CFG.retentionDays || 30);
+let P = {a:{}, b:{}};
+try { const raw = localStorage.getItem(KEY); if (raw) P = Object.assign({a:{},b:{}}, JSON.parse(raw)); } catch(e) {}
+let fbUser = null, fbDb = null, cloudTimer = null;
+function save(){
+  try { localStorage.setItem(KEY, JSON.stringify(P)); } catch(e) {}
+  if (fbUser && fbDb){ clearTimeout(cloudTimer); cloudTimer = setTimeout(saveCloud, 1500); }
+}
+function saveCloud(){
+  if (!fbUser || !fbDb) return;
+  const ts = firebase.firestore.Timestamp;
+  fbDb.collection("progress").doc(fbUser.uid).set({
+    a: P.a, b: P.b,
+    updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+    expiresAt: ts.fromMillis(Date.now() + DAYS*86400000)
+  }).catch(err => setAuthNote("Couldn't save to your account just now. Your progress is still saved on this device."));
+}
+
+const byId = {};
+DATA.forEach(q => byId[q.id] = q);
+
+// ---------- header ----------
+$("#counts").innerHTML = SUBJECTS.map(s => `<span>${SUBNAME[s]} <b>${DATA.filter(q=>q.s===s).length.toLocaleString("en-IN")}</b></span>`).join("") + `<span>Total <b>${DATA.length.toLocaleString("en-IN")}</b></span>`;
+
+// ---------- tabs ----------
+document.querySelectorAll("nav.tabs button").forEach(b => b.addEventListener("click", () => showTab(b.dataset.tab)));
+function showTab(t){
+  document.querySelectorAll("nav.tabs button").forEach(b => b.setAttribute("aria-selected", b.dataset.tab===t));
+  ["practice","mock","notes","review","about"].forEach(x => $("#tab-"+x).hidden = x!==t);
+  if (t==="review") renderReview();
+  try { sessionStorage.setItem(KEY+".tab", t); } catch(e) {}
+}
+
+// ---------- shuffle helper ----------
+function shuffled(arr){ const a = arr.slice(); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+// ---------- question renderer ----------
+function qHTML(q, i, n, opts){
+  const bm = P.b[q.id] ? "true" : "false";
+  return `<div class="meta"><span class="chip">${esc(SUBNAME[q.s])}</span><span class="chip">${esc(q.t)}</span><span class="chip src">${esc(q.src||"")}</span><span class="num">${i+1} / ${n.toLocaleString("en-IN")}</span></div>
+  <p class="q">${esc(q.q)}</p>
+  <div class="opts">${q.o.map((o,k)=>`<button class="opt" data-k="${k}"><span class="l">${L[k]}</span><span>${esc(o)}</span></button>`).join("")}</div>
+  <div class="explain" hidden></div>
+  <div class="nav">${opts.prev?'<button class="btn" data-act="prev">← Previous</button>':''}<button class="bm" data-act="bm" aria-pressed="${bm}">☆ Mark for review</button><span class="sp"></span>${opts.next?'<button class="btn primary" data-act="next">Next →</button>':''}</div>`;
+}
+function explainHTML(q, picked){
+  const ok = picked===q.a;
+  return `<div class="v ${ok?'good':'bad'}">${ok?'Correct.':'Not quite — the answer is '+L[q.a]+'. '+esc(q.o[q.a])}</div>
+  <div>${esc(q.e)}</div>${q.k?`<div class="tip"><b>Shortcut</b><br>${esc(q.k)}</div>`:''}`;
+}
+function markOpts(card, q, picked){
+  card.querySelectorAll(".opt").forEach(b => { const k=+b.dataset.k; b.disabled=true; if(k===q.a) b.classList.add("ok"); else if(k===picked) b.classList.add("no"); });
+}
+
+// ---------- PRACTICE ----------
+let pList = [], pIdx = 0, customList = null;
+const pSub = $("#p-sub"), pTop = $("#p-top");
+pSub.innerHTML = `<option value="">All subjects</option>` + SUBJECTS.map(s=>`<option value="${s}">${SUBNAME[s]}</option>`).join("");
+function fillTopics(){
+  const s = pSub.value;
+  const topics = [...new Set(DATA.filter(q=>!s||q.s===s).map(q=>q.t))].sort();
+  pTop.innerHTML = `<option value="">All topics</option>` + topics.map(t=>`<option>${esc(t)}</option>`).join("");
+}
+function buildPractice(keepIdx){
+  const s = pSub.value, t = pTop.value, term = $("#p-q").value.trim().toLowerCase(), ord = $("#p-order").value;
+  let list = customList ? customList.map(id=>byId[id]) : DATA.filter(q => (!s||q.s===s) && (!t||q.t===t) && (!term || (q.q+" "+q.o.join(" ")+" "+q.t).toLowerCase().includes(term)));
+  if (ord==="shuffle") list = shuffled(list);
+  if (ord==="unseen") list = shuffled(list.filter(q=>!(q.id in P.a))).concat(shuffled(list.filter(q=>q.id in P.a)));
+  pList = list; pIdx = keepIdx ? Math.min(pIdx, list.length-1) : 0;
+  renderPractice(); renderPStats();
+}
+function renderPractice(){
+  const card = $("#p-card");
+  if (!pList.length){ card.innerHTML = `<div class="empty">No questions match. Clear the search or pick another topic.</div>`; return; }
+  const q = pList[pIdx];
+  card.innerHTML = (customList?`<p style="margin:0 0 10px"><b>Review set</b> · <button class="btn" data-act="exit">Back to all questions</button></p>`:"") + qHTML(q, pIdx, pList.length, {prev:pIdx>0, next:pIdx<pList.length-1});
+}
+$("#p-card").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const q = pList[pIdx];
+  if (b.classList.contains("opt")){
+    const k = +b.dataset.k; markOpts($("#p-card"), q, k);
+    const ex = $("#p-card .explain"); ex.innerHTML = explainHTML(q,k); ex.hidden = false;
+    P.a[q.id] = k===q.a ? 1 : 0; save(); renderPStats();
+  } else if (b.dataset.act==="next"){ pIdx++; renderPractice(); }
+  else if (b.dataset.act==="prev"){ pIdx--; renderPractice(); }
+  else if (b.dataset.act==="bm"){ if (P.b[q.id]) delete P.b[q.id]; else P.b[q.id]=1; save(); b.setAttribute("aria-pressed", !!P.b[q.id]); }
+  else if (b.dataset.act==="exit"){ customList=null; buildPractice(); }
+});
+document.addEventListener("keydown", e => {
+  if ($("#tab-practice").hidden || /INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)) return;
+  const k = "abcd".indexOf(e.key.toLowerCase());
+  if (k>=0){ const b = $(`#p-card .opt[data-k="${k}"]`); if (b && !b.disabled) b.click(); }
+  if (e.key==="ArrowRight" && pIdx<pList.length-1){ pIdx++; renderPractice(); }
+  if (e.key==="ArrowLeft" && pIdx>0){ pIdx--; renderPractice(); }
+});
+function renderPStats(){
+  const ids = pList.map(q=>q.id);
+  const done = ids.filter(id=>id in P.a), right = done.filter(id=>P.a[id]===1);
+  const pct = done.length ? Math.round(100*right.length/done.length) : 0;
+  $("#p-stats").innerHTML = `<span>In this set: <b>${ids.length.toLocaleString("en-IN")}</b></span><span>Attempted <b>${done.length.toLocaleString("en-IN")}</b></span><span>Correct <b>${right.length.toLocaleString("en-IN")}</b></span><span>Accuracy <b>${pct}%</b></span><span>Keys: A–D to answer, ← → to move</span>`;
+}
+pSub.addEventListener("change", ()=>{ customList=null; fillTopics(); buildPractice(); });
+pTop.addEventListener("change", ()=>{ customList=null; buildPractice(); });
+$("#p-order").addEventListener("change", ()=>buildPractice());
+let st; $("#p-q").addEventListener("input", ()=>{ clearTimeout(st); st=setTimeout(()=>{customList=null; buildPractice();},250); });
+
+// ---------- MOCK ----------
+let M = null, mTimer = null;
+$("#m-start").addEventListener("click", () => {
+  const n = Math.max(5, Math.min(50, +$("#m-n").value||25));
+  const mins = Math.max(10, Math.min(240, +$("#m-min").value||120));
+  const secs = ["English","GK","Maths","Reasoning"].concat($("#m-comp").checked?["Computer"]:[]);
+  let qs = [];
+  secs.forEach(s => {
+    let pool = DATA.filter(q=>q.s===s);
+    if (s==="GK"){ // make sure Meghalaya/NE questions appear, as in real papers
+      const meg = shuffled(pool.filter(q=>q.t==="Meghalaya"||q.t==="North East India")).slice(0, Math.round(n*0.3));
+      const rest = shuffled(pool.filter(q=>!meg.includes(q))).slice(0, n-meg.length);
+      qs = qs.concat(shuffled(meg.concat(rest)));
+    } else {
+      // spread across topics
+      const byT = {}; pool.forEach(q=>(byT[q.t]=byT[q.t]||[]).push(q));
+      const topics = shuffled(Object.keys(byT)); let pick = [], r = 0;
+      Object.values(byT).forEach(v=>shuffled(v));
+      const bags = Object.fromEntries(topics.map(t=>[t, shuffled(byT[t])]));
+      while (pick.length < n){ const t = topics[r++ % topics.length]; if (bags[t].length) pick.push(bags[t].pop()); }
+      qs = qs.concat(pick);
+    }
+  });
+  M = {qs, ans: Array(qs.length).fill(null), i:0, end: Date.now()+mins*60000, neg: +$("#m-neg").value, secs, n, done:false};
+  $("#m-setup").hidden = true; $("#m-result").hidden = true; $("#m-run").hidden = false; $("#m-confirm").hidden = true;
+  $("#m-title").textContent = `Mock test · ${qs.length} questions`;
+  renderMock(); tick(); mTimer = setInterval(tick, 1000);
+});
+function tick(){
+  if (!M || M.done) return;
+  const left = Math.max(0, M.end - Date.now());
+  const m = Math.floor(left/60000), s = Math.floor(left%60000/1000);
+  const t = $("#m-timer"); t.textContent = `${m}:${String(s).padStart(2,"0")}`; t.classList.toggle("low", left < 5*60000);
+  if (left<=0) finishMock();
+}
+function renderMock(){
+  const q = M.qs[M.i];
+  const card = $("#m-card");
+  card.innerHTML = qHTML(q, M.i, M.qs.length, {prev:M.i>0, next:M.i<M.qs.length-1}).replace('<div class="explain" hidden></div>','') ;
+  if (M.ans[M.i]!==null) card.querySelector(`.opt[data-k="${M.ans[M.i]}"]`).classList.add("pick");
+  $("#m-grid").innerHTML = M.qs.map((_,k)=>`<button data-k="${k}" class="${M.ans[k]!==null?'done':''} ${k===M.i?'cur':''}" aria-label="Question ${k+1}">${k+1}</button>`).join("");
+}
+$("#m-card").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b || M.done) return;
+  const q = M.qs[M.i];
+  if (b.classList.contains("opt")){ const k=+b.dataset.k; M.ans[M.i] = M.ans[M.i]===k ? null : k; renderMock(); }
+  else if (b.dataset.act==="next"){ M.i++; renderMock(); }
+  else if (b.dataset.act==="prev"){ M.i--; renderMock(); }
+  else if (b.dataset.act==="bm"){ if (P.b[q.id]) delete P.b[q.id]; else P.b[q.id]=1; save(); b.setAttribute("aria-pressed", !!P.b[q.id]); }
+});
+$("#m-grid").addEventListener("click", e => { const b=e.target.closest("button"); if(!b) return; M.i=+b.dataset.k; renderMock(); });
+$("#m-submit").addEventListener("click", () => { const left = M.ans.filter(a=>a===null).length; $("#m-left").textContent = left ? `${left} question${left>1?'s are':' is'} still unanswered.` : "All questions answered."; $("#m-confirm").hidden=false; });
+$("#m-no").addEventListener("click", ()=> $("#m-confirm").hidden=true);
+$("#m-yes").addEventListener("click", finishMock);
+function finishMock(){
+  if (!M || M.done) return; M.done = true; clearInterval(mTimer);
+  let right=0, wrong=0; const per = {};
+  M.qs.forEach((q,k)=>{ const a=M.ans[k]; per[q.s]=per[q.s]||{r:0,w:0,n:0}; per[q.s].n++;
+    if (a===null) return; if (a===q.a){right++;per[q.s].r++;P.a[q.id]=1;} else {wrong++;per[q.s].w++;P.a[q.id]=0;} });
+  save();
+  const score = right - wrong*M.neg;
+  const res = $("#m-result");
+  res.innerHTML = `<div class="card"><h2>Result</h2>
+   <div class="score"><div><small>Score</small><strong>${(Math.round(score*100)/100)} / ${M.qs.length}</strong></div><div><small>Correct</small><strong style="color:var(--good)">${right}</strong></div><div><small>Wrong</small><strong style="color:var(--bad)">${wrong}</strong></div><div><small>Unanswered</small><strong>${M.qs.length-right-wrong}</strong></div></div>
+   <div class="score">${M.secs.map(s=>`<div><small>${SUBNAME[s]}</small><strong>${per[s].r}/${per[s].n}</strong></div>`).join("")}</div>
+   <p><button class="btn primary" id="m-again">New mock test</button></p></div><div class="adslot" data-slot="result" hidden></div>
+   <h2 style="margin:20px 0 10px">Answers</h2><div class="rlist">${M.qs.map((q,k)=>{const a=M.ans[k];const st=a===null?'Unanswered':a===q.a?'Correct':'Wrong — you chose '+L[a];
+     return `<div class="card"><div class="meta"><span class="chip">${k+1}</span><span class="chip">${esc(SUBNAME[q.s])}</span><span class="chip">${esc(q.t)}</span><span class="num" style="color:${a===q.a?'var(--good)':a===null?'var(--muted)':'var(--bad)'}">${st}</span></div><p class="q" style="font-size:1rem">${esc(q.q)}</p><div class="ans">${L[q.a]}. ${esc(q.o[q.a])}</div><div style="margin-top:6px">${esc(q.e)}</div>${q.k?`<div class="tip" style="margin-top:8px"><b>Shortcut</b><br>${esc(q.k)}</div>`:''}</div>`}).join("")}</div>`;
+  $("#m-run").hidden = true; res.hidden = false; res.querySelectorAll('.adslot').forEach(fillAd);
+  $("#m-again").addEventListener("click", ()=>{ res.hidden=true; $("#m-setup").hidden=false; M=null; });
+  window.scrollTo({top:0});
+}
+
+// ---------- NOTES ----------
+const nSub = $("#n-sub");
+const nSubs = [...new Set(NOTES.map(n=>n.s))];
+nSub.innerHTML = `<option value="">All</option>` + nSubs.map(s=>`<option>${esc(s)}</option>`).join("");
+function renderNotes(){ const s=nSub.value; $("#n-body").innerHTML = NOTES.filter(n=>!s||n.s===s).map(n=>`<section><div class="sub">${esc(n.s)}</div><h3 style="margin:4px 0 6px">${esc(n.title)}</h3>${n.html}</section>`).join(""); }
+nSub.addEventListener("change", renderNotes);
+
+// ---------- REVIEW ----------
+function reviewIds(){ const kind=$("#r-kind").value; return kind==="wrong" ? Object.keys(P.a).filter(id=>P.a[id]===0&&byId[id]) : Object.keys(P.b).filter(id=>byId[id]); }
+function renderReview(){
+  const ids = reviewIds();
+  $("#r-practice").disabled = !ids.length;
+  $("#r-list").innerHTML = ids.length ? ids.slice(0,300).map(id=>{const q=byId[id];return `<div class="card"><div class="meta"><span class="chip">${esc(SUBNAME[q.s])}</span><span class="chip">${esc(q.t)}</span></div><p class="q" style="font-size:1rem">${esc(q.q)}</p><div class="ans">${L[q.a]}. ${esc(q.o[q.a])}</div><div style="margin-top:6px">${esc(q.e)}</div></div>`}).join("") + (ids.length>300?`<p class="empty">Showing 300 of ${ids.length}. Use “Practise these” to go through all of them.</p>`:"")
+    : `<div class="empty">${$("#r-kind").value==="wrong"?"No wrong answers yet. Questions you get wrong in Practice or a Mock Test collect here.":"Nothing marked yet. Use ☆ Mark for review on any question."}</div>`;
+}
+$("#r-kind").addEventListener("change", renderReview);
+$("#r-practice").addEventListener("click", ()=>{ customList = reviewIds(); $("#p-order").value="shuffle"; showTab("practice"); buildPractice(); });
+$("#r-reset").addEventListener("click", ()=> $("#r-confirm").hidden=false);
+$("#r-no").addEventListener("click", ()=> $("#r-confirm").hidden=true);
+$("#r-yes").addEventListener("click", ()=>{ P={a:{},b:{}}; save(); $("#r-confirm").hidden=true; renderReview(); renderPStats(); });
+
+// ---------- sign-in (Firebase) ----------
+function setAuthNote(t){ const n = document.querySelector("#authbar .note"); if (n) n.textContent = t; }
+function renderAuth(){
+  const bar = $("#authbar");
+  if (!fbReady){ bar.innerHTML = `<span class="who">Progress is saved on this device</span>`; return; }
+  if (fbUser){
+    bar.innerHTML = `<span class="who">Signed in as <b>${esc(fbUser.displayName || fbUser.email || "you")}</b></span><button class="btn" id="signout">Sign out</button><span class="note">Progress kept for ${DAYS} days after your last visit.</span>`;
+    $("#signout").onclick = () => firebase.auth().signOut();
+  } else {
+    bar.innerHTML = `<button class="btn primary" id="signin">Sign in with Google</button><span class="note">Sign in to keep your progress across devices for ${DAYS} days.</span>`;
+    $("#signin").onclick = () => firebase.auth().signInWithPopup(new firebase.auth.GoogleAuthProvider())
+      .catch(e => { if (e.code !== "auth/popup-closed-by-user") setAuthNote("Sign-in didn't finish: " + (e.message || e.code)); });
+  }
+}
+let fbReady = false;
+function loadScript(src){ return new Promise((ok, no) => { const s = document.createElement("script"); s.src = src; s.onload = ok; s.onerror = no; document.head.appendChild(s); }); }
+async function initFirebase(){
+  const c = CFG.firebase || {};
+  if (!c.apiKey) { renderAuth(); return; }
+  try {
+    const v = "10.12.2", base = `https://www.gstatic.com/firebasejs/${v}/`;
+    await loadScript(base + "firebase-app-compat.js");
+    await Promise.all([loadScript(base + "firebase-auth-compat.js"), loadScript(base + "firebase-firestore-compat.js")]);
+    firebase.initializeApp(c);
+    fbDb = firebase.firestore(); fbReady = true;
+    firebase.auth().onAuthStateChanged(async u => {
+      const wasSignedIn = !!fbUser;
+      fbUser = u;
+      if (u){
+        try {
+          const snap = await fbDb.collection("progress").doc(u.uid).get();
+          const d = snap.exists ? snap.data() : null;
+          const expired = d && d.expiresAt && d.expiresAt.toMillis() < Date.now();
+          const cloud = (d && !expired) ? {a: d.a || {}, b: d.b || {}} : {a:{}, b:{}};
+          // merge anything answered on this device before signing in
+          P = {a: Object.assign({}, cloud.a, P.a), b: Object.assign({}, cloud.b, P.b)};
+          if (expired) setTimeout(() => setAuthNote(`Your earlier progress was older than ${DAYS} days and was cleared.`), 0);
+          save(); saveCloud();
+        } catch(e) { setTimeout(() => setAuthNote("Couldn't load your saved progress. Check your connection and reload."), 0); }
+      } else if (wasSignedIn) {
+        // signed out: clear this device so the next person starts fresh
+        P = {a:{}, b:{}}; try { localStorage.removeItem(KEY); } catch(e) {}
+      }
+      renderAuth(); renderPStats(); if (!$("#tab-review").hidden) renderReview();
+    });
+  } catch(e) { fbReady = false; renderAuth(); setAuthNote("Sign-in is unavailable right now; progress is saved on this device."); }
+}
+
+// ---------- ads (Google AdSense) ----------
+function initAds(){
+  const ad = CFG.adsense || {};
+  if (!ad.client) return;
+  const s = document.createElement("script");
+  s.async = true; s.crossOrigin = "anonymous";
+  s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + encodeURIComponent(ad.client);
+  document.head.appendChild(s);
+  document.querySelectorAll(".adslot").forEach(fillAd);
+}
+function fillAd(el){
+  const ad = CFG.adsense || {}; const slot = (ad.slots || {})[el.dataset.slot];
+  if (!ad.client || !slot || el.dataset.filled) return;
+  el.innerHTML = `<span class="lbl">Advertisement</span><ins class="adsbygoogle" style="display:block" data-ad-client="${esc(ad.client)}" data-ad-slot="${esc(slot)}" data-ad-format="auto" data-full-width-responsive="true"></ins>`;
+  el.hidden = false; el.dataset.filled = "1";
+  try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch(e) {}
+}
+
+// ---------- boot ----------
+fillTopics(); buildPractice(); renderNotes(); document.getElementById('yr').textContent = new Date().getFullYear(); initFirebase(); initAds();
+try { const t = sessionStorage.getItem(KEY+".tab"); if (t && t!=="mock") showTab(t); } catch(e) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>About – MPSC Question Bank</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&family=Source+Sans+3:wght@400;600&display=swap">
+<style>
+:root{--bg:#eef1f3;--ink:#18242b;--muted:#5b6a73;--accent:#1f6b52}
+@media (prefers-color-scheme:dark){:root{--bg:#11181c;--ink:#e3eaee;--muted:#93a3ad;--accent:#4fbf95;color-scheme:dark}}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 "Source Sans 3","Segoe UI",Roboto,Arial,sans-serif;margin:0}
+main{max-width:70ch;margin:0 auto;padding-inline:16px;padding-block:28px 60px}
+h1,h2{font-family:"Zilla Slab",Georgia,serif}
+a{color:var(--accent)}
+</style>
+<script src="config.js"></script>
+</head>
+<body>
+<main>
+<p><a href="index.html">← Back to the question bank</a></p>
+<h1>About</h1>
+<p>MPSC Question Bank is a free practice site for candidates preparing for Meghalaya Public Service Commission examinations — Group C, Assistant, LDA-type posts and the MCS preliminary.</p>
+<h2>What's inside</h2>
+<p>More than 7,600 multiple-choice questions in General English, General Knowledge with a Meghalaya and North East section, Arithmetic, Reasoning and Computer Knowledge. Every question has its answer, a worked solution and a shortcut method. There are timed mock tests in the MPSC pattern and topic-wise shortcut notes.</p>
+<h2>Where the questions come from</h2>
+<p>All questions are original practice questions written to the syllabus and style of past MPSC and UPSC papers. They are not copies of official question papers, and this site is not affiliated with the Meghalaya Public Service Commission. Official notifications and past papers are on <a href="https://mpsc.meghalaya.gov.in" rel="noopener">mpsc.meghalaya.gov.in</a>.</p>
+<p>If you spot a mistake in any question, please write in — corrections are made quickly.</p>
+<h2>Contact</h2>
+<p><span class="mail">your-email@example.com</span></p>
+</main>
+<script>
+var c = window.SITE_CONFIG || {};
+document.querySelectorAll(".mail").forEach(function(e){ e.textContent = c.contactEmail || e.textContent; });
+</script>
+</body>
+</html>
